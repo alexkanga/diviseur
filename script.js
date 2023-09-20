@@ -6,11 +6,11 @@ function diviseurs(number){
     let diviseurArray = [];
     let indexDiffMin = 0;
     let diffMin = number; //on considere que diviseur min est 0 ce qui est pas possible donc diffMin = number
-    
+    let indexdiviseurArray = 0;
     for(let i = 1; i < number; i++) {
         if(number % i === 0){
             let resultat = number / i;
-            let indexdiviseurArray = 0;
+            
             let diff = Math.abs(resultat-i);
            
             
@@ -30,6 +30,7 @@ function diviseurs(number){
     }
 
     console.log(diffMin , indexDiffMin);
+    //return diviseurArray;
      return diviseurArray[indexDiffMin];
     
 }
